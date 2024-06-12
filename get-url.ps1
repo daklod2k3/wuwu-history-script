@@ -59,6 +59,9 @@ $payloads = $content | Where-Object {
     }
 }
 
+Write-Output $content
+Write-Output $payloads
+
 if ($payloads[0] -match "{.+}"){
     $json = ConvertFrom-Json $matches[0]
     $url = $json.url.Split("?")[1]
