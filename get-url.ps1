@@ -67,6 +67,7 @@ if ($payloads[0] -match "{.+}"){
 
 if ($url -eq ""){
     Write-Output "Failed to get url, please ensure that opened the Roll history once before running the script!"
+    exit
 }
 Write-Output "Url Found!"
 Write-Output $url
