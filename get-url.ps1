@@ -62,14 +62,15 @@ $payloads = $content | Where-Object {
 Write-Output $content
 Write-Output $payloads
 
-if ($payloads[0] -match "{.+}"){
+
+if ($payloads.count -ne 0 -And $payloads[0] -match "{.+}"){
     $json = ConvertFrom-Json $matches[0]
     $url = $json.url.Split("?")[1]
     
 }
 
 if ($url -eq $null){
-    Write-Output "Failed to get url, please ensure that opened the Roll history once before running the script!"
+    Write-Output "Failed to get url, please ensure that opened the Record history once before running the script!"
     exit
 }
 Write-Output "Url Found!"
