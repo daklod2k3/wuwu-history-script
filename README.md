@@ -12,10 +12,6 @@ The Wuwu History Script is designed to provide a convenient way to obtain the Ro
 - Analyze historical data
 - Easy to use and integrate
 
-## Contributing
-
-Contributions are welcome! If you would like to contribute to the Wuwu History Script, please follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
 ## License
 
 This project is licensed under the [Apache License 2.0](LICENSE).
