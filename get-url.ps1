@@ -57,13 +57,14 @@ $payloads = $content | Where-Object {
         # $_.json = ConvertFrom-Json $_
         return $_
     }
-}
+} 
 
-Write-Output $content
-Write-Output $payloads
+# Write-Output $content
+# Write-Output $payloads[3]
 
-
-if ($payloads.count -ne 0 -And $payloads[0] -match "{.+}"){
+$payload = $payloads | Select-Object -Last 1
+if ($payloads.count -ne 0 -And $payload -match "{.+}"){
+    
     $json = ConvertFrom-Json $matches[0]
     $url = $json.url.Split("?")[1]
     
